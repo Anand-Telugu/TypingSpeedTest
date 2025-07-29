@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title" id="typing_speed_heading">Typing Speed Test</h1>
+            <p class="subtitle">Test your typing speed and accuracy</p>
+        </header>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-value" id="wpmStat">0</div>
+                <div class="stat-label">Words per Minutes</div>
+            </div>    
+            <div class="stat-card">
+                <div class="stat-value" id="accuracyStat">100%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>    
+            <div class="stat-card">
+                <div class="stat-value" id="charsStat">0</div>
+                <div class="stat-label">Characters</div>
+            </div>    
+        </div>
+
+        <div class="timer" id="timer">1:00</div>
+        <div class="text-display" id="textDisplay"></div>
+
+        <div class="text-section">
+            <input 
+            type="text" 
+            class="input-field" 
+            id="inputField" 
+            placeholder="Start Typing here...." 
+            autocomplete="off" 
+            autocorrect="off" 
+            autocapitalize="off" 
+            spellcheck="false">
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="restartBtn">Restart Test</button>
+            <button class="btn btn-secondary" id="newTextBtn">New Text</button>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+
+    <div class="modal" id="resultModal">
+        <div class="modal-content">
+            <h2 class="modal-title">Test Results</h2>
+            <div class="result-stats">
+                <div class="result-stat">
+                    <div class="result-value" id="finalWpm">0</div>
+                    <div class="result-label">WPM</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-value" id="finalAccuracy">0%</div>
+                    <div class="result-label">Accuracy</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-value" id="finalChars">0</div>
+                    <div class="result-label">Characters</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-value" id="finalErrors">0</div>
+                    <div class="result-label">Errors</div>
+                </div>
+            </div>
+            <button class="btn btn-primary" onclick="restrartTest()">
+                Try Again
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
